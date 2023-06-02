@@ -1,0 +1,3 @@
+name: RKitPvP
+version: '${project.version}'
+main: ga.justreddy.wiki.rkitpvp.RKitPvP
