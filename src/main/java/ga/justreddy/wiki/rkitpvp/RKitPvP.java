@@ -1,7 +1,10 @@
 package ga.justreddy.wiki.rkitpvp;
 
 import com.google.gson.Gson;
+import ga.justreddy.wiki.rkitpvp.model.entity.data.PlayerKits;
 import ga.justreddy.wiki.rkitpvp.model.entity.data.PlayerStats;
+import ga.justreddy.wiki.rkitpvp.model.kit.layout.KitLayout;
+import ga.justreddy.wiki.rkitpvp.model.storage.YMLStorage;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
@@ -29,6 +32,9 @@ public final class RKitPvP extends JavaPlugin {
 
     private void loadConfigurationSerializables() {
         ConfigurationSerialization.registerClass(PlayerStats.class);
+        ConfigurationSerialization.registerClass(PlayerKits.class);
+        ConfigurationSerialization.registerClass(KitLayout.class);
+
     }
 
 }

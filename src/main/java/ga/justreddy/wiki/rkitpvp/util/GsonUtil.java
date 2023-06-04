@@ -1,9 +1,6 @@
 package ga.justreddy.wiki.rkitpvp.util;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializer;
+import com.google.gson.*;
 import ga.justreddy.wiki.rkitpvp.RKitPvP;
 
 
@@ -11,6 +8,10 @@ public class GsonUtil {
 
     public static <T> T fromJson(String str, Class<T> clazz) {
         return RKitPvP.getInstance().getGson().fromJson(str, clazz);
+    }
+
+    public static <T> T fromJson(JsonElement element, Class<T> clazz) {
+        return RKitPvP.getInstance().getGson().fromJson(element, clazz);
     }
 
     public static <T> T fromJson(String str, JsonDeserializer<T> deserializer,  Class<T> clazz) {

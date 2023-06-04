@@ -35,11 +35,12 @@ public class YMLStorage implements Storage {
         File file = getUserFile(player.getUniqueId());
         FileConfiguration config = YamlConfiguration.loadConfiguration(file);
         config.set("stats", player.getStats());
+        config.set("kits", player.getKits());
     }
 
     @Override
     public void loadPlayer(KitPlayer player) {
-        
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 package ga.justreddy.wiki.rkitpvp.model.entity;
 
+import ga.justreddy.wiki.rkitpvp.model.entity.data.PlayerKits;
 import ga.justreddy.wiki.rkitpvp.model.entity.data.PlayerStats;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -20,12 +21,14 @@ public class KitPlayer {
     String name;
     Player player;
     @NonFinal PlayerStats stats;
+    @NonFinal PlayerKits kits;
 
     public KitPlayer(UUID uniqueId, String name) {
         this.uniqueId = uniqueId;
         this.name = name;
         this.player = Bukkit.getPlayer(uniqueId);
         this.stats = new PlayerStats();
+        this.kits = new PlayerKits();
     }
 
 }
